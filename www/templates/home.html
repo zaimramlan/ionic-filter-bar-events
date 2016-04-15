@@ -1,0 +1,23 @@
+<ion-view title="Home">
+	<!-- can replace with ion-nav-bar in index.html -->
+	<ion-nav-bar>
+		<ion-nav-back-button></ion-nav-back-button>
+		<ion-nav-buttons side="secondary">
+	        <button class="button button-icon ion-android-search" ng-click="showFilterBar()"></button>
+        </ion-nav-buttons>
+	</ion-nav-bar>
+
+	<ion-content overflow-scroll="true">
+		<ion-list ng-repeat="event in events">
+			<ion-item ui-sref="home">
+				<h1>{{ event.name }}</h1>
+				<p>
+					{{ event.address }}
+					<br>{{ event.description }}
+					<br>{{ event.email }}
+					<br>{{ event.ticketprice }}
+				</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
